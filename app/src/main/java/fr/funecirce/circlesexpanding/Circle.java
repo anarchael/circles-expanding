@@ -28,7 +28,11 @@ public class Circle {
 
     public void draw(Graphics g2d) {
         Random rand = new Random();
-        g2d.setColor(new Color(rand.nextInt(255), rand.nextInt(255), rand.nextInt(255), alpha));
+        g2d.setColor(new Color(
+            rand.nextInt(150,255), 
+            rand.nextInt(150,255), 
+            rand.nextInt(150,255), 
+            alpha));
         g2d.drawOval(pos.x, pos.y, radius, radius);
     }
 

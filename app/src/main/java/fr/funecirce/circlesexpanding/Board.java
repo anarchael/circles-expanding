@@ -51,11 +51,7 @@ public class Board extends JPanel implements ActionListener, MouseListener{
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        Point pos = e.getPoint();
-        int radius = 50;
-        int offset = 10;
         
-        circles.add(new Circle(pos.x-radius/2-offset, pos.y-radius-offset, radius));
     }
 
     @Override
@@ -65,7 +61,11 @@ public class Board extends JPanel implements ActionListener, MouseListener{
 
     @Override
     public void mouseReleased(MouseEvent e) {
-
+        Point pos = e.getPoint();
+        int radius = 50;
+        int offset = 10;
+        
+        circles.add(new Circle(pos.x-radius/2-offset, pos.y-radius-offset, radius));
     }
 
     @Override
