@@ -1,6 +1,7 @@
 ##################################################################
 
 This program is just to experiment with colors with Swing in Java.
+
 It also helped me understanding the usages of listeners such as
 MouseListener or ActionListener.
 
