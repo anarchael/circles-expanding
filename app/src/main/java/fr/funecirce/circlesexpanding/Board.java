@@ -21,8 +21,7 @@ public class Board extends JPanel implements ActionListener, MouseListener{
     public final int Y_SIZE = 400;
     public final Dimension WINDOW_SIZE = new Dimension(X_SIZE, Y_SIZE);
 
-    private final int DELAY = 10;
-    private int cooldown = 0;
+    private final int DELAY = 25;
 
     @SuppressWarnings("FieldMayBeFinal")
     private ArrayList<Circle> circles = new ArrayList<>();
@@ -80,8 +79,6 @@ public class Board extends JPanel implements ActionListener, MouseListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(cooldown != 0) reduceCooldown(DELAY);
-        
         updateCircles();
 
         repaint();
@@ -95,10 +92,6 @@ public class Board extends JPanel implements ActionListener, MouseListener{
             }
         }
         circles.removeAll(fadedCircles);
-    }
-
-    public void reduceCooldown(int amount) {
-        cooldown-=amount;
     }
 
 }
